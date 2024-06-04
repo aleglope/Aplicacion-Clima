@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f3f3f3;
   }
-  
+
   .contenedor {
     max-width: 500px;
     margin: 0 auto;
@@ -11,28 +11,50 @@ body {
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-  
+
   h1 {
     color: #333333;
   }
-  
+
   input[type="text"] {
     padding: 10px;
     font-size: 16px;
     width: 70%;
   }
-  
+
   button {
     padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 10px;
     font-size: 16px;
     background-color: #4CAF50;
     color: #ffffff;
     border: none;
     cursor: pointer;
-  }
-  
+    animation: parpadeo 1s infinite alternate; /* Aplica la animación */
+}
+
+@keyframes parpadeo {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
   #datosClima {
     margin-top: 20px;
     font-size: 18px;
   }
-  
+
+  @keyframes parpadeo-rapido {
+    0%, 100% {
+        opacity: 1;
+        color: #9d7ae2;
+    }
+    50% {
+        opacity: 1;
+        color: black;
+    }
+}
